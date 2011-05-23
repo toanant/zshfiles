@@ -105,6 +105,8 @@ alias e='gvim --remote-tab-silent'
 alias -g ack='ack-grep'
 alias -g G='| grep'
 alias -g L='| less'
+alias -g H='| head'
+alias -g T='| tail'
 
 alias sz='source ~/.zshrc'
 alias ez='e ~/.zshrc'
