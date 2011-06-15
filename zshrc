@@ -165,6 +165,15 @@ preexec () {
     esac
 }
 
+gitb="/usr/bin/git"
+git(){
+  if [[ -z "$1" ]]; then
+    $gitb status
+  else
+    $gitb $@
+  fi
+}
+
 # Set default working directory of tmux to the given directory; use the current
 # working directory if none given.
 #
