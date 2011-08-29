@@ -1,0 +1,2 @@
+# reset `LD_PRELOAD` that might have been set in a `preexec_function`
+export LD_PRELOAD=''

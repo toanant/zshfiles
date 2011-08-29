@@ -131,8 +131,6 @@ export PATH=$PATH:/$HOME/opt/ncbi-blast/bin
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 precmd() {
-    # reset LD_PRELOAD that might have been set in preexec()
-    export LD_PRELOAD=''
 
     # send a visual bell to awesome
     echo -ne '\a'
@@ -159,14 +157,11 @@ preexec () {
             print -Pn "\e]2;$command\a"
             ;;
     esac
-
-    # automatically use proxychains for git, bzr, and ssh
-    case $first in
-        git|bzr|ssh)
-            export LD_PRELOAD=libproxychains.so.3
-            ;;
-    esac
 }
+
+# Tunneling
+precmd_functions=( "${precmd_functions[@]:#_tunnel_precmd}" _tunnel_precmd )
+preexec_functions=( "${preexec_functions[@]:#_tunnel_preexec}" _tunnel_preexec )
 
 # Automatically append a / after ..
 rationalise-dot() {
