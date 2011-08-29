@@ -1,4 +1,6 @@
 fpath=(~/.zsh/Completion $fpath)
+fpath=(~/.zsh/functions $fpath)
+autoload -U ~/.zsh/functions/*(:t)
 
 HISTFILE=~/.histfile
 HISTSIZE=5000
