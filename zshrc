@@ -126,8 +126,6 @@ export PATH=$PATH:/$HOME/opt/ncbi-blast/bin
 
 export _JAVA_AWT_WM_NONREPARENTING=1
 
-s() { find . -iname "*$@*" }
-
 precmd() {
     # reset LD_PRELOAD that might have been set in preexec()
     export LD_PRELOAD=''
@@ -173,21 +171,6 @@ git(){
   else
     $gitb $@
   fi
-}
-
-# Set default working directory of tmux to the given directory; use the current
-# working directory if none given.
-#
-# TODO: this does not honour .rvmrc
-cdt(){
-    [[ -n "$1" ]] && dir="$1" || dir="${PWD}"
-    if [[ -d "$dir" ]]; then
-        tmux "set-option" "default-path" "${dir}"
-        return 0
-    else
-        echo "tcd: no such directory: ${dir}"
-        return 1
-    fi
 }
 
 # Automatically append a / after ..
