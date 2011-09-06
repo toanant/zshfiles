@@ -141,9 +141,6 @@ precmd() {
             print -Pn "\e]2;%d\a"
             ;;
     esac
-
-    # for autojump
-    z --add "$(pwd -P)"
 }
 
 preexec () {
@@ -188,6 +185,7 @@ if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then source "$HOME/.rvm/scripts/rvm" ; fi
 
 # Auto jump; https://github.com/sjl/z-zsh
 . $HOME/.zsh/z/z.sh
+precmd_functions=( "${precmd_functions[@]:#_z}" _z_precmd )
 
 # Rooter; https://github.com/yeban/rooter.sh
 . $HOME/.zsh/rooter.sh/rooter.sh
