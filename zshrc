@@ -164,15 +164,6 @@ preexec () {
     esac
 }
 
-gitb="/usr/bin/git"
-git(){
-  if [[ -z "$1" ]]; then
-    $gitb status
-  else
-    $gitb $@
-  fi
-}
-
 # Automatically append a / after ..
 rationalise-dot() {
   if [[ $LBUFFER = *.. ]]; then
