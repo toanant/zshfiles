@@ -1,6 +1,10 @@
 fpath=(~/.zsh/functions $fpath)
 autoload -U ~/.zsh/functions/*(:t)
 
+# Hooks
+typeset -ga precmd_functions
+typeset -ga preexec_functions
+
 HISTFILE=~/.histfile
 HISTSIZE=5000
 SAVEHIST=5000
