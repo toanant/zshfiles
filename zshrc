@@ -56,7 +56,7 @@ zstyle ':completion:*' list-suffixes true
 zstyle ':completion:*' expand suffix
 zstyle ':completion:*:kill:*' command 'ps -u$USER'
 
-zstyle ':completion::expand:*' tag-order 'expansions all-expansions'
+zstyle ':completion::expand:*' tag-order all-expansions
 zstyle ':completion:*' remove-all-dups true
 zstyle ':completion:*' group-name ''
 zstyle ':completion:*' format '%B%d:%b'
