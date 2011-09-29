@@ -7,6 +7,3 @@ local command=${1%% *}
 if (( ${+tunnel[(r)$command]} )); then
   export LD_PRELOAD=libproxychains.so.3
 fi
-
-# [1]: http://www.cs.elte.hu/zsh-manual/zsh_6.html#SEC29
-# [2]: http://zsh.sourceforge.net/Guide/zshguide05.html
