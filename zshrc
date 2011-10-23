@@ -28,6 +28,7 @@ setopt pushdignoredups
 setopt pushdsilent
 
 setopt autolist
+setopt completeinword
 unsetopt listambiguous
 
 setopt listpacked
@@ -56,6 +57,10 @@ zstyle ':completion:*' list-suffixes true
 zstyle ':completion:*' expand suffix
 zstyle ':completion:*:kill:*' command 'ps -u$USER'
 
+zstyle ':completion:*' subst-globs-only true
+zstyle ':completion:*' match-original both
+
+zstyle ':completion:*' add-space true
 zstyle ':completion::expand:*' tag-order all-expansions
 zstyle ':completion:*' remove-all-dups true
 zstyle ':completion:*' group-name ''
@@ -163,3 +168,4 @@ precmd_functions=( "${precmd_functions[@]:#_z}" _z_precmd )
 
 # Rooter; https://github.com/yeban/rooter.sh
 . $HOME/.zsh/rooter.sh/rooter.sh
+# The following lines were added by compinstall

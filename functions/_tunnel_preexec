@@ -1,5 +1,5 @@
 typeset -ga tunnel
-tunnel=(git ssh irssi)
+tunnel=(git ssh scp irssi)
 
 local command=${1%% *}
 
