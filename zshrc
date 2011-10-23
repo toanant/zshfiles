@@ -134,31 +134,15 @@ precmd() {
 
     # send a visual bell to awesome
     echo -ne '\a'
-
-    # set cwd in terminals
-    case $TERM in
-        xterm|rxvt|rxvt-unicode|screen)
-            print -Pn "\e]2;%d\a"
-            ;;
-    esac
-}
-
-preexec () {
-    local command=${(V)1//\%\%\%}
-    local first=${command%% *}
-
-    # set terminal's title to the currently executing command
-    case $TERM in
-        xterm|rxvt|rxvt-unicode|screen)
-            command=$(print -Pn "%40>...>$command" | tr -d "\n")
-            print -Pn "\e]2;$command\a"
-            ;;
-    esac
 }
 
 # Tunneling
 precmd_functions=( "${precmd_functions[@]:#_tunnel_precmd}" _tunnel_precmd )
 preexec_functions=( "${preexec_functions[@]:#_tunnel_preexec}" _tunnel_preexec )
+
+# Title
+precmd_functions=( "${precmd_functions[@]:#_title_precmd}" _title_precmd )
+preexec_functions=( "${preexec_functions[@]:#_title_preexec}" _title_preexec )
 
 # Automatically append a / after ..
 rationalise-dot() {
