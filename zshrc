@@ -16,6 +16,7 @@ setopt histignorealldups
 setopt histfindnodups
 setopt histignorespace
 
+setopt braceccl
 setopt extendedglob
 setopt notify
 setopt correct
