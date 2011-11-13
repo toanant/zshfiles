@@ -1,2 +1,2 @@
 # for autojump
-z --add "$(pwd -P)"
+_z --add "$(pwd -P)"
