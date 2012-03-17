@@ -154,9 +154,6 @@ rationalise-dot() {
 zle -N rationalise-dot
 bindkey . rationalise-dot
 
-# Load RVM; http://rvm.beginrescueend.com/
-if [[ -s "$HOME/.rvm/scripts/rvm" ]] ; then source "$HOME/.rvm/scripts/rvm" ; fi
-
 # Auto jump; https://github.com/sjl/z-zsh
 . $HOME/.zsh/z/z.sh
 precmd_functions=( "${precmd_functions[@]:#_z_precmd}" _z_precmd )
