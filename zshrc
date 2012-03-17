@@ -121,8 +121,6 @@ alias entertain='mplayer "$(find "." -type f -regextype posix-egrep -regex ".*\.
 alias rand='tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR="1;32" grep --color "[^ ]"'
 
 ### Exports
-export PKG_CONFIG_PATH=/home/yeban/opt/lib/pkgconfig/:${PKG_CONFIG_PATH}
-
 export PYTHONSTARTUP=$HOME/.pythonrc
 export PATH=$PATH:/$HOME/opt/ncbi-blast-2.2.25+/bin
 
