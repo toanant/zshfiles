@@ -124,7 +124,6 @@ alias rand='tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock 
 export PKG_CONFIG_PATH=/home/yeban/opt/lib/pkgconfig/:${PKG_CONFIG_PATH}
 
 export PYTHONSTARTUP=$HOME/.pythonrc
-export RSENSE_HOME=/home/yeban/opt/rsense-0.3
 export PATH=$PATH:/$HOME/opt/ncbi-blast-2.2.25+/bin
 
 export _JAVA_AWT_WM_NONREPARENTING=1
