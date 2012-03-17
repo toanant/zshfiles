@@ -1,0 +1,16 @@
+Setup
+=====
+
+    $ git clone https://yeban@github.com/yeban/zshfiles.git .zsh
+    $ cd .zsh
+    $ git submodule init && git submodule update
+    $ cd
+    $ ln -s .zsh/zshrc  .zsh
+    $ ln -s .zsh/zshevn .zshenv
+
+Features
+========
+
+* Fuzzy completion.
+* Jump to most frequently used directory.
+* Install and manage Ruby versions with ease.
