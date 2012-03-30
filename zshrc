@@ -117,6 +117,7 @@ alias -g G='| grep'
 alias -g L='| less'
 alias -g H='| head'
 alias -g T='| tail'
+alias -g Y='| xclip && xclip -o | xclip -se c'
 
 alias sz='source ~/.zshrc'
 alias ez='e ~/.zshrc'
