@@ -129,10 +129,6 @@ precmd() {
     echo -ne '\a'
 }
 
-# Tunneling
-precmd_functions=( "${precmd_functions[@]:#_tunnel_precmd}" _tunnel_precmd )
-preexec_functions=( "${preexec_functions[@]:#_tunnel_preexec}" _tunnel_preexec )
-
 # Title
 precmd_functions=( "${precmd_functions[@]:#_title_precmd}" _title_precmd )
 preexec_functions=( "${preexec_functions[@]:#_title_preexec}" _title_preexec )
