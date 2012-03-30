@@ -36,11 +36,17 @@ setopt listtypes
 unsetopt flowcontrol
 unsetopt beep
 
+
+### Key bindings ###
 bindkey -e
 bindkey '^P' history-beginning-search-backward
 bindkey '^N' history-beginning-search-forward
 bindkey '^[[Z' reverse-menu-complete
 bindkey '^[/' undo
+
+zle -N rationalize-dot
+bindkey . rationalize-dot
+
 
 # configure zsh's autocompletion system; man zshcompsys
 zstyle ':completion:*' use-cache on
@@ -132,17 +138,6 @@ precmd() {
 # Title
 precmd_functions=( "${precmd_functions[@]:#_title_precmd}" _title_precmd )
 preexec_functions=( "${preexec_functions[@]:#_title_preexec}" _title_preexec )
-
-# Automatically append a / after ..
-rationalise-dot() {
-  if [[ $LBUFFER = *.. ]]; then
-    LBUFFER+=/..
-  else
-    LBUFFER+=.
-  fi
-}
-zle -N rationalise-dot
-bindkey . rationalise-dot
 
 # Auto jump; https://github.com/sjl/z-zsh
 . $HOME/.zsh/z/z.sh

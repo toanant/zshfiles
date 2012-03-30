@@ -14,3 +14,4 @@ Features
 * Fuzzy completion.
 * Jump to most frequently used directory.
 * Install and manage Ruby versions with ease.
+* Intelligently add '/' when it sees a series of dots.
