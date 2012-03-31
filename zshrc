@@ -118,6 +118,7 @@ alias -g L='| less'
 alias -g H='| head'
 alias -g T='| tail'
 alias -g Y='| xclip && xclip -o | xclip -se c'
+alias -g R='$(git rev-parse --show-toplevel 2> /dev/null)'
 
 alias sz='source ~/.zshrc'
 alias ez='e ~/.zshrc'
@@ -143,6 +144,3 @@ preexec_functions=( "${preexec_functions[@]:#_title_preexec}" _title_preexec )
 # Auto jump; https://github.com/sjl/z-zsh
 . $HOME/.zsh/z/z.sh
 precmd_functions=( "${precmd_functions[@]:#_z_precmd}" _z_precmd )
-
-# Rooter; https://github.com/yeban/rooter.sh
-. $HOME/.zsh/rooter.sh/rooter.sh

@@ -1,6 +1,3 @@
-[submodule "rooter.sh"]
-	path = rooter.sh
-	url = git://github.com/yeban/rooter.sh.git
 [submodule "z"]
 	path = z
 	url = git://github.com/rupa/z.git
