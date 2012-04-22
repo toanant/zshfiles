@@ -96,8 +96,6 @@ alias ll='ls -lhG --color'
 alias ls='ls -G --color'
 alias l='ls -G --color'
 
-alias info='info --vi-keys'
-
 alias pi='sudo aptitude install'
 alias pr='sudo aptitude remove'
 alias pp='sudo aptitude purge'
@@ -123,8 +121,6 @@ alias -g R='$(git rev-parse --show-toplevel 2> /dev/null)'
 alias sz='source ~/.zshrc'
 alias ez='e ~/.zshrc'
 
-alias sshr="ssh -p $srp $sr"
-
 alias entertain='mplayer "$(find "." -type f -regextype posix-egrep -regex ".*\.(avi|mkv|flv|mpg|mpeg|mp4|wmv|3gp|mov|divx)" | shuf -n1)"'
 alias rand='tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR="1;32" grep --color "[^ ]"'
 
@@ -132,7 +128,6 @@ alias rand='tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock 
 export _JAVA_AWT_WM_NONREPARENTING=1
 
 precmd() {
-
     # send a visual bell to awesome
     echo -ne '\a'
 }
