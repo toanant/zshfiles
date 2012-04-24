@@ -15,3 +15,6 @@ Features
 * Jump to most frequently used directory.
 * Install and manage Ruby versions with ease.
 * Intelligently add '/' when it sees a series of dots.
+* Zprompt - a minimal configuration of zsh to run as a launcher (.zprompt), and
+  a shell script (depends on xterm) to launch it (bin/zprompt).  Needs a little
+  more tweaking to be perfectly usable.
