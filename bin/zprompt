@@ -4,6 +4,5 @@ xterm -name zprompt\
   -geometry 96x4\
   -bg '#000010'\
   -fg '#DCDCCC'\
-  -fa Monaco\
-  -fs 10\
+  -fa Monospace\
   -e sh -c "/bin/zsh -t -i -d"
