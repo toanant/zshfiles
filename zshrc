@@ -50,7 +50,6 @@ bindkey . rationalize-dot
 
 # configure zsh's autocompletion system; man zshcompsys
 zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path ~/.zsh/cache
 
 zstyle ':completion:*' completer _expand _complete _match _approximate
 zstyle ':completion:*' matcher-list '+' '+m:{[:lower:]}={[:upper:]}' '+r:|[._-]=** r:|=**' '+l:|=* r:|=*'
