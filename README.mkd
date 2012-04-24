@@ -5,8 +5,8 @@ Setup
     $ cd .zsh
     $ git submodule init && git submodule update
     $ cd
-    $ ln -s .zsh/zshrc  .zsh
-    $ ln -s .zsh/zshevn .zshenv
+    $ ln -s .zsh/.zshrc
+    $ ln -s .zsh/.zshenv
 
 Features
 ========
