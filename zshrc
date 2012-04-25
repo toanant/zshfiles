@@ -1,6 +1,8 @@
 fpath=(~/.zsh/functions $fpath)
 autoload -U ~/.zsh/functions/*(:t)
 
+for config_file ($ZSH/lib/*.zsh) source $config_file
+
 # Hooks
 typeset -ga precmd_functions
 typeset -ga preexec_functions
@@ -75,13 +77,41 @@ zstyle ':completion:*' insert-tab false
 zstyle ':completion:*' prompt ''\''%e'\'''
 zstyle ':completion:*:manuals' separate-sections true
 
+# Load plugins
+plugins=(git)
+
+is_plugin() {
+  local base_dir=$1
+  local name=$2
+  test -f $base_dir/plugins/$name/$name.plugin.zsh \
+    || test -f $base_dir/plugins/$name/_$name
+}
+# Add all defined plugins to fpath. This must be done
+# before running compinit.
+for plugin ($plugins); do
+    fpath=($ZSH/plugins/$plugin $fpath)
+done
+
 autoload -Uz compinit
 compinit
 
+
+# Load all of the plugins that were defined in ~/.zshrc
+for plugin ($plugins); do
+    source $ZSH/plugins/$plugin/$plugin.plugin.zsh
+done
+
+
+
 # Initialize prompt
-autoload -Uz promptinit
-promptinit
-prompt adam2
+
+PROMPT=$'%{$fg_bold[green]%}%n@%m %{$fg[blue]%}%D{[%I:%M:%S]} %{$reset_color%}%{$fg[white]%}[%~]%{$reset_color%} $(git_prompt_info)\
+    %{$fg[blue]%}->%{$fg_bold[blue]%} %#%{$reset_color%} '
+
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[green]%}["
+ZSH_THEME_GIT_PROMPT_SUFFIX="]%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}*%{$fg[green]%}"
+ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 #PS1="%~$ "
 #export MOZ_NO_REMOTE=1
@@ -137,4 +167,9 @@ preexec_functions=( "${preexec_functions[@]:#_title_preexec}" _title_preexec )
 
 # Auto jump; https://github.com/sjl/z-zsh
 . $HOME/.zsh/z/z.sh
+
+autoload -U colors
+colors
+setopt prompt_subst
+
 precmd_functions=( "${precmd_functions[@]:#_z_precmd}" _z_precmd )

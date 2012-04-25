@@ -3,3 +3,5 @@ if [[ -z "$1" ]]; then
 else
   command git $@
 fi
+
+
