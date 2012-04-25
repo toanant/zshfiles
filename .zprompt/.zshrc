@@ -24,8 +24,16 @@ compinit
 autoload -U zsh-mime-setup
 zsh-mime-setup
 
+# predictive typing (`man zshcontrib`)
 autoload -U predict-on
-predict-on
+
+# re-enable predictive typing at each prompt
+zle-line-init() { predict-on }
+zle -N zle-line-init
+
+# disable predictive typing where it doesn't make sense
+zstyle ':predict' toggle true
+zstyle ':predict' verbose true
 
 # ensure zprompt exits after launching the command
 function preexec() {
