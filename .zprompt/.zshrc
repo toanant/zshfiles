@@ -34,5 +34,12 @@ function preexec() {
   exit           # and quit this shell
 }
 
+# exit on escape key
+function escape() {
+  exit
+}
+zle -N escape
+bindkey '^[' escape
+
 # Prompt
 PROMPT=">> "
