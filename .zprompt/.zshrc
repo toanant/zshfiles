@@ -21,16 +21,18 @@ zstyle ':completion:*' list-colors no=00 fi=00 di=01\;34 pi=33 so=01\;35 bd=00\;
 autoload -Uz compinit
 compinit
 
-# Prompt
-PROMPT=">> "
-
-function preexec() {
-    unset ZDOTDIR    
-    exec "$1" &
-}
-
 autoload -U zsh-mime-setup
 zsh-mime-setup
 
 autoload -U predict-on
 predict-on
+
+# ensure zprompt exits after launching the command
+function preexec() {
+  unset ZDOTDIR  # limit zprompt settings to itself
+  eval "$1 &!"   # launch and disown the command
+  exit           # and quit this shell
+}
+
+# Prompt
+PROMPT=">> "

@@ -5,4 +5,4 @@ xterm -name zprompt\
   -bg '#000010'\
   -fg '#DCDCCC'\
   -fa Monospace\
-  -e sh -c "/bin/zsh -t -i -d"
+  -e sh -c "/bin/zsh -d"
