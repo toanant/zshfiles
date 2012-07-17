@@ -1,5 +1,5 @@
 # set proxy
-proxy=http://144.16.192.245:8080
+proxy=''
 http_proxy=$proxy
 https_proxy=$proxy
 ftp_proxy=$proxy
