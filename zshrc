@@ -149,6 +149,7 @@ alias -g R='$(git rev-parse --show-toplevel 2> /dev/null)'
 
 alias sz='source ~/.zshrc'
 alias ez='e ~/.zshrc'
+alias ee='e ~/.emacs'
 
 alias entertain='mplayer "$(find "." -type f -regextype posix-egrep -regex ".*\.(avi|mkv|flv|mpg|mpeg|mp4|wmv|3gp|mov|divx)" | shuf -n1)"'
 alias rand='tr -c "[:digit:]" " " < /dev/urandom | dd cbs=$COLUMNS conv=unblock | GREP_COLOR="1;32" grep --color "[^ ]"'
