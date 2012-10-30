@@ -137,7 +137,7 @@ alias psh='aptitude show'
 alias halt='sudo shutdown -h now'
 alias reboot='sudo reboot'
 
-alias e='gvim --remote-tab-silent'
+alias e='emacs '
 
 alias -g ack='ack-grep'
 alias -g G='| grep'
