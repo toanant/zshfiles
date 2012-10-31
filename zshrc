@@ -1,3 +1,4 @@
+
 fpath=(~/.zsh/functions $fpath)
 autoload -U ~/.zsh/functions/*(:t)
 
@@ -120,10 +121,10 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""
 alias df='df -h'
 alias du='du -hs'
 
-alias la='ls -aG --color'
-alias ll='ls -lhG --color'
-alias ls='ls -G --color'
-alias l='ls -G --color'
+alias la='ls -aG -color'
+alias ll='ls -lhG -color'
+alias ls='ls -G -color'
+alias l='ls -G -color'
 
 alias pi='sudo aptitude install'
 alias pr='sudo aptitude remove'
