@@ -138,8 +138,8 @@ alias psh='aptitude show'
 alias halt='sudo shutdown -h now'
 alias reboot='sudo reboot'
 
-alias emacs='emacs -nw'
-alias e='emacs '
+#alias emacs='emacs -nw'
+alias e='emacsclient -a "" -nc '
 
 alias -g ack='ack-grep'
 alias -g G='| grep'
