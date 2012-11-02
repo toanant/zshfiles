@@ -139,7 +139,7 @@ alias halt='sudo shutdown -h now'
 alias reboot='sudo reboot'
 
 #alias emacs='emacs -nw'
-alias e='emacsclient -a "" -nc '
+alias e='emacsclient -a "" -n '
 
 alias -g ack='ack-grep'
 alias -g G='| grep'
