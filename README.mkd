@@ -1,12 +1,11 @@
 Setup
 =====
 
-    $ git clone https://yeban@github.com/yeban/zshfiles.git .zsh
-    $ cd .zsh
+    $ git clone https://yeban@github.com/yeban/zshfiles.git ~/.zsh
+    $ cd ~/.zsh
     $ git submodule init && git submodule update
-    $ cd
-    $ ln -s .zsh/.zshrc
-    $ ln -s .zsh/.zshenv
+    $ ln -s ~/.zsh/zshrc ~/.zshrc
+    $ ln -s ~/.zsh/zshenv ~/.zshrc
 
 Features
 ========
