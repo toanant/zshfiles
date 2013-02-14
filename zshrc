@@ -175,3 +175,4 @@ colors
 setopt prompt_subst
 
 precmd_functions=( "${precmd_functions[@]:#_z_precmd}" _z_precmd )
+source /usr/local/bin/virtualenvwrapper.sh
