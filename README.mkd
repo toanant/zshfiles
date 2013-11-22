@@ -5,7 +5,12 @@ Setup
     $ cd ~/.zsh
     $ git submodule init && git submodule update
     $ ln -s ~/.zsh/zshrc ~/.zshrc
-    $ ln -s ~/.zsh/zshenv ~/.zshrc
+    $ ln -s ~/.zsh/zshenv ~/.zshenv
+
+For Debian based distros: -
+=====
+    $ sudo apt-get install zsh
+    $ sudo chsh (when prompt appear change this to /bin/zsh)
 
 Features
 ========
