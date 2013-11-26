@@ -1,7 +1,7 @@
 Setup
 =====
 
-    $ git clone https://github.com/psjinx/zshfiles.git ~/.zsh
+    $ git clone https://github.com/toanant/zshfiles.git ~/.zsh
     $ cd ~/.zsh
     $ git submodule init && git submodule update
     $ ln -s ~/.zsh/zshrc ~/.zshrc
