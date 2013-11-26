@@ -1,4 +1,3 @@
-
 fpath=(~/.zsh/functions $fpath)
 autoload -U ~/.zsh/functions/*(:t)
 
@@ -126,14 +125,14 @@ alias ll='ls -lhG -color'
 alias ls='ls -G -color'
 alias l='ls -G -color'
 
-alias pi='sudo aptitude install'
-alias pr='sudo aptitude remove'
-alias pp='sudo aptitude purge'
-alias pud='sudo aptitude update'
-alias pug='sudo aptitude safe-upgrade'
-alias pufg='sudo aptitude full-upgrade'
-alias pse='aptitude search'
-alias psh='aptitude show'
+alias ai='sudo aptitude install'
+alias ar='sudo aptitude remove'
+alias ap='sudo aptitude purge'
+alias au='sudo aptitude update'
+alias aus='sudo aptitude safe-upgrade'
+alias aufg='sudo aptitude full-upgrade'
+alias ase='aptitude search'
+alias ash='aptitude show'
 
 alias halt='sudo shutdown -h now'
 alias reboot='sudo reboot'
