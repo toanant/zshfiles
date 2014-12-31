@@ -12,7 +12,7 @@ For Debian based distros: -
 
     $ sudo apt-get install zsh python-pip
     $ sudo pip install -U virtualenvwrapper
-    $ sudo chsh (when prompt appear change this to /bin/zsh)
+    $ chsh -s /bin/zsh
     $ echo "exec zsh" >> ~/.bashrc
     $ source ~/.bashrc
 
