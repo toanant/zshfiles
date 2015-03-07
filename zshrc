@@ -177,4 +177,3 @@ precmd_functions=( "${precmd_functions[@]:#_z_precmd}" _z_precmd )
 source /usr/local/bin/virtualenvwrapper.sh
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-export PIP_DOWNLOAD_CACHE=$HOME/.pip_download_cache
